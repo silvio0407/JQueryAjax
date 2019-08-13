@@ -12,7 +12,8 @@
                 $('#submit').click(function(event) {
                     var username=$('#user').val();
                  $.get('ActionServlet',{user:username},function(responseText) {
-                        $('#welcometext').text(responseText);
+                	 console.log(responseText)
+                        $('#welcometext').text(responseText.name);
                     });
                 });
             });
@@ -20,7 +21,7 @@
 </head>
 <body>
 <form id="form1">
-<h1>AJAX Demo using Jquery in JSP and Servlet</h1>
+<h1>....</h1>
 Enter your Name:
 <input type="text" id="user"/>
 <input type="button" id="submit" value="Ajax Submit"/>
